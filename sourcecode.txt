@@ -1,0 +1,49 @@
+
+    1. ssh root@47.254.242.17
+         
+    2. root@iZ8psi2f05o3u61bvpd:~# sudo apt install default-jdk
+          
+    3. root@iZ8psi2f05o3u61bvpd:~# java --version
+          
+    4. root@iZ8psi2f05o3u61bvpd:~# curl -O https://downloads.apache.org/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
+    
+    5. root@iZ8psi2f05o3u61bvpd:~# tar xvzf spark-2.4.7-bin-hadoop2.7.tgz 
+   
+    6. root@iZ8psi2f05o3u61bvpd:~# sudo mv spark-2.4.7-bin-hadoop2.7 /opt/spark
+    
+    7. root@iZ8psi2f05o3u61bvpd:~# cd /opt/spark/ 
+   
+    8. root@iZ8psi2f05o3u61bvpd:/opt/spark# sudo sbin/start-master.sh
+
+    9. root@root@iZ8psi2f05o3u61bvpd:/opt/spark# cat /opt/spark/logs/spark-root-org.apache.spark.deploy.master.Master-1 iZ8psi2f05o3u61bvpd.out
+
+    10. root@root@iZ8psi2f05o3u61bvpd:/opt/spark# sudo
+    
+    11. sbin/start-slave.sh
+    
+    12. spark://root@iZ8psi2f05o3u61bvpd:7077
+
+    13. root@iZ8psi2f05o3u61bvpd:/opt/spark# pico input.txt
+             
+    14. root@iZ8psi2f05o3u61bvpd:/opt/spark# bin/spark-shell
+
+    15. scala> val inputfile = sc.textFile("input.txt")
+
+    16. scala> val counts = inputfile.flatMap(line => line.split("")).map(word => (word,1)).reduceByKey(_+_);
+
+    17. scala> counts.cache()
+
+    18. scala> counts.saveAsTextFile("output")
+             
+    19. scala> root@iZ8psi2f05o3u61bvpd:/opt/spark# cd output/
+	
+    20. root@iZ8psi2f05o3u61bvpd:/opt/spark/output# cat part-00000
+     
+    21. stop-slave.sh stop-master.sh
+                   
+    22. exit ()
+
+
+
+
+
