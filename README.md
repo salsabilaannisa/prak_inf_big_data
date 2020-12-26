@@ -42,7 +42,7 @@ Sebelum memasang perangkat lunak baru, ada baiknya untuk menyegarkan basis data 
     5.	Selanjutnya Extract file spark yang kita download tadi dengan perintah tar. Disini dilakukan proses kompresi file apache yang sudah didownload sebelumnya dengan menggunakan perintah dibawah ini :
           root@iZ8psi2f05o3u61bvpd:~# tar xvzf spark-2.4.7-bin-hadoop2.7.tgz 
    
-   `6.	setelah file ter extract semua, pindahkan spark-2.4.7-bin-hadoop2.7 ke directory /opt/spark, menggunakan perintah mv.
+    6.	setelah file ter extract semua, pindahkan spark-2.4.7-bin-hadoop2.7 ke directory /opt/spark, menggunakan perintah mv.
           root@iZ8psi2f05o3u61bvpd:~# sudo mv spark-2.4.7-bin-hadoop2.7 /opt/spark
     
     7.  Kemudian masuklah ke directory /opt/spark dengan menggunakan perintah cd.
