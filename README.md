@@ -1,4 +1,9 @@
-    Apache Spark adalah teknologi komputasi clustering yang sangat cepat dan dirancang untuk kebutuhan yang memerlukan penanganan data secara cepat seperti big data dan machine learning.
+Disusun Oleh :  
+        1. Husef Sholikhul Ibad (185410110)
+        2. Annisa Salsabila (185410070)
+        
+   
+   Apache Spark adalah teknologi komputasi clustering yang sangat cepat dan dirancang untuk kebutuhan yang memerlukan penanganan data secara cepat seperti big data dan machine learning.
 
     Fitur andalan Apache spark adalah kumpulan memori yang dapat meningkatkan kecepatan pemrosesan aplikasi. Spark dirancang untuk menutupi berbagai beban kerja, seperti proses aplikasi, algoritma berulang-ulang, query interaktif, dan transmisi. Selain mendukung semua beban kerja pada setiap sistem, fitur apache spark ini juga dapat mengurangi beban maintenance management.
 
