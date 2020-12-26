@@ -27,33 +27,33 @@ Membangun Infrastruktur Apache Spark
 
 Sebelum memasang perangkat lunak baru, ada baiknya untuk menyegarkan basis data paket perangkat lunak lokal Anda untuk memastikan Anda mengakses versi terbaru.
 
-    1.	Pastikan kalian memiliki vm, buka terminal lalu masukkan kode ssh berikut : 
+    1. Pastikan kalian memiliki vm, buka terminal lalu masukkan kode ssh berikut : 
          ssh root@47.254.242.17
          
-    2.	Sebelum menginstall apache spark, kita membutuhkan sebuah Packages / mengistall dependensi yang diperlukan seperti JDK .
+    2. Sebelum menginstall apache spark, kita membutuhkan sebuah Packages / mengistall dependensi yang diperlukan seperti JDK .
           root@iZ8psi2f05o3u61bvpd:~# sudo apt install default-jdk
           
-    3.	Cek java Version, sekaligus mengecek apakah JDK sudah terinstall seperti yang kita inginkan.
+    3. Cek java Version, sekaligus mengecek apakah JDK sudah terinstall seperti yang kita inginkan.
           root@iZ8psi2f05o3u61bvpd:~# java --version
           
-    4.	Unduh Spark dari situs web dengan menggunakan perintah wget/curl dan tautan langsung untuk mengunduh arsip :
+    4. Unduh Spark dari situs web dengan menggunakan perintah wget/curl dan tautan langsung untuk mengunduh arsip :
           root@iZ8psi2f05o3u61bvpd:~# curl -O https://downloads.apache.org/spark/spark-2.4.7/spark-2.4.7-bin-hadoop2.7.tgz
     
-    5.	Selanjutnya Extract file spark yang kita download tadi dengan perintah tar. Disini dilakukan proses kompresi file apache yang sudah didownload sebelumnya dengan menggunakan perintah dibawah ini :
+    5. Selanjutnya Extract file spark yang kita download tadi dengan perintah tar. Disini dilakukan proses kompresi file apache yang sudah didownload sebelumnya dengan menggunakan perintah dibawah ini :
           root@iZ8psi2f05o3u61bvpd:~# tar xvzf spark-2.4.7-bin-hadoop2.7.tgz 
    
-    6.	setelah file ter extract semua, pindahkan spark-2.4.7-bin-hadoop2.7 ke directory /opt/spark, menggunakan perintah mv.
+    6. setelah file ter extract semua, pindahkan spark-2.4.7-bin-hadoop2.7 ke directory /opt/spark, menggunakan perintah mv.
           root@iZ8psi2f05o3u61bvpd:~# sudo mv spark-2.4.7-bin-hadoop2.7 /opt/spark
     
-    7.  Kemudian masuklah ke directory /opt/spark dengan menggunakan perintah cd.
+    7. Kemudian masuklah ke directory /opt/spark dengan menggunakan perintah cd.
           root@iZ8psi2f05o3u61bvpd:~# cd /opt/spark/ 
    
-    8.  setelah masuk ke directory /opt/spark, run master.sh menggunakan perintah berikut :
+    8. setelah masuk ke directory /opt/spark, run master.sh menggunakan perintah berikut :
           root@iZ8psi2f05o3u61bvpd:/opt/spark# sudo sbin/start-master.sh
 
           Setelah dikonfigurasi, selanjutnya adalah start server-master spark. Perintah sebelumnya menambahkan direktori yang diperlukan ke variabel PATH sistem, jadi perintah ini dapat dijalankan dari direktori manapun ;
      
-    9.	Gunakan perintah cat untuk mengetahui url spark untuk digunakan menjalankan perintah slave nantinya.
+    9. Gunakan perintah cat untuk mengetahui url spark untuk digunakan menjalankan perintah slave nantinya.
            root@root@iZ8psi2f05o3u61bvpd:/opt/spark# cat /opt/spark/logs/spark-root-org.apache.spark.deploy.master.Master-1 iZ8psi2f05o3u61bvpd.out
 
     10. Selanjutnya kita jalankan Spark Slave Server menggunakan perintah :
