@@ -1,6 +1,7 @@
-Disusun Oleh :  
-        1. Husef Sholikhul Ibad (185410110)
-        2. Annisa Salsabila (185410070)
+        Disusun Oleh :  
+                 1. Husef Sholikhul Ibad (185410110)
+        
+                 2. Annisa Salsabila (185410070)
         
    
    Apache Spark adalah teknologi komputasi clustering yang sangat cepat dan dirancang untuk kebutuhan yang memerlukan penanganan data secara cepat seperti big data dan machine learning.
